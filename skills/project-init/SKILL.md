@@ -36,7 +36,7 @@ Do not guess answers to 3-6. Leave out a section rather than fill it with assump
 1. Copy `<kit>/templates/project/<lang>/docs/*.md` (`<lang>` is `en` or `tr`) to `<target>/docs/`. Replace the `{{PROJECT_NAME}}` placeholder in the titles. Do not add content of your own.
 2. Create `AGENTS.md` from `<kit>/templates/project/AGENTS.md.tmpl`: replace `{{PROJECT_NAME}}` and `{{DESCRIPTION}}`. The template contains "Read first" and "Working style". Add the sections the user answered, between those two, in this order: `## Stack`, `## Hard rules`, `## Language` (only if given), and after "Working style" `## Commands`. Use short bullet lists in the user's words.
 3. Create `CLAUDE.md` from `<kit>/templates/project/CLAUDE.md` (it contains only `@AGENTS.md`).
-4. Write the kit version to `<target>/docs/.kit-version` (just the version string and a newline).
+4. Write `<target>/docs/.kit-version` with two lines: the kit version (content of `<kit>/VERSION`) and `lang: en` or `lang: tr`. The kit's `check` script reads this file.
 
 ## 5. Report
 
